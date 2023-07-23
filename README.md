@@ -13,18 +13,20 @@ double & string & char
 ```
 #### Operators:
 ```C#
-if(){...}
-else{...}
+switch
 ```
-The ***if-else*** construct is able to check one or more conditions, and if the condition is not true, then execute another code or check another condition.
+The ***switch*** statement provides multidirectional branching in the program.
+
 #### Functions
 ```C#
 Output to console: Console.WriteLine();
 Intput from console: Console.ReadLine();
-Converts: Convert.ToDecimal();
+Converts: Convert.ToDouble();
 ```
 * Also in the code i used ***Escape Characters*** - replacement of control characters in the text with corresponding text substitutions.
 Read more , [link](https://codebuns.com/csharp-basics/escape-sequences/).
+
+If you want to see the old version , then follow the [link](https://github.com/ZafarUrakov/NewCalculator/tree/releases/v2.0) !
 #### Demo
 
 ![](>/../demo2/demo0.png)
