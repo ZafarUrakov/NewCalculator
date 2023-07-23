@@ -51,7 +51,7 @@
                 [{firstNumberConvert} % {secondNumberConvert} = "
                 + $"{firstNumberConvert % secondNumberConvert}]");
             else 
-                Console.WriteLine("There is no such choice , try again by entering \"dotnet run\" ");
+                Console.WriteLine("There is no such choice , try again by entering \"dotnet run\" !");
         }
     }
 }
