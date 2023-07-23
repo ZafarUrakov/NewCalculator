@@ -29,25 +29,25 @@ double & string
 
 
 ### You can take my code and try it yourself !
-* 1. About the list of files,click <> Code.
+1.About the list of files,click <> Code.
 
 ![](./demo2/demo1.png)
 
 
-* 2. Copy the URL(HTTPS) of the repository.
+2.Copy the URL(HTTPS) of the repository.
 
 ![](./demo2/demo2.png)
 
 
-* 3. Open terminal.
+3.Open terminal.
 
-* 4. Change the current working catalogue ti the location where the cloned catalogur should be located.
+4.Change the current working catalogue ti the location where the cloned catalogur should be located.
 
-* 5. Type "***git clone***" and paste the URL copied earlier.
+5.Type "***git clone***" and paste the URL copied earlier.
 
 ![](./demo2/demo3.png)
 
-* 6. Press enter to create a local clone.
+6.Press enter to create a local clone.
 
 ![](./demo2/demo4.png)
 
