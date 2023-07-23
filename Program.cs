@@ -27,31 +27,18 @@
 
             Console.WriteLine("\nNumbers are being converted...\n");
 
-            decimal firstNumberConvert = Convert.ToDecimal(firstNumber);
-            decimal secondNumberConvert = Convert.ToDecimal(secondNumber);
-
-            if(action == '+')
-                Console.WriteLine(@$"Here are your result:
-                [{firstNumberConvert} + {secondNumberConvert} = "
-                +$"{firstNumberConvert + secondNumberConvert}]");
-            else if(action == '-')
-                Console.WriteLine(@$"Here are your result:
-                [{firstNumberConvert} - {secondNumberConvert} = "
-                + $"{firstNumberConvert - secondNumberConvert}]");
-            else if(action == '*')
-                Console.WriteLine(@$"Here are your result:
-                [{firstNumberConvert} * {secondNumberConvert} = " 
-                + $"{firstNumberConvert * secondNumberConvert}]");
-            else if(action == '/')
-                Console.WriteLine(@$"Here are your result:
-                [{firstNumberConvert} / {secondNumberConvert} = "
-                + $"{firstNumberConvert / secondNumberConvert}]");
-            else if(action == '%')
-                Console.WriteLine(@$"Here are your result:
-                [{firstNumberConvert} % {secondNumberConvert} = "
-                + $"{firstNumberConvert % secondNumberConvert}]");
-            else 
-                Console.WriteLine("There is no such choice , try again by entering \"dotnet run\" !");
+            double readyAnswer = action switch
+            {
+                '+' => firstNumber + secondNumber,
+                '-' => firstNumber - secondNumber,
+                '*' => firstNumber * secondNumber,
+                '/' => firstNumber / secondNumber,
+                '%' => firstNumber % secondNumber,
+                _ => 0
+            };
+            Console.WriteLine("Here are your result:");
+            Console.WriteLine($"|{firstNumber} {action} {secondNumber} = "
+            +$"{readyAnswer}|");
         }
     }
 }
