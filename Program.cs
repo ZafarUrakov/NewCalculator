@@ -27,31 +27,70 @@
 
             Console.WriteLine("\nNumbers are being converted...\n");
 
-            decimal firstNumberConvert = Convert.ToDecimal(firstNumber);
-            decimal secondNumberConvert = Convert.ToDecimal(secondNumber);
+            double readyAnswer = action switch
+            {
+                '+' => firstNumber + secondNumber,
+                '-' => firstNumber - secondNumber,
+                '*' => firstNumber * secondNumber,
+                '/' => firstNumber / secondNumber,
+                '%' => firstNumber % secondNumber,
+                _ => 0
+            };
+            Console.WriteLine("Here are your result:");
+            Console.WriteLine($"|{firstNumber} {action} {secondNumber} = "
+            +$"{readyAnswer}|");
+            
+            //If-else
 
-            if(action == '+')
-                Console.WriteLine(@$"Here are your result:
-                [{firstNumberConvert} + {secondNumberConvert} = "
-                +$"{firstNumberConvert + secondNumberConvert}]");
-            else if(action == '-')
-                Console.WriteLine(@$"Here are your result:
-                [{firstNumberConvert} - {secondNumberConvert} = "
-                + $"{firstNumberConvert - secondNumberConvert}]");
-            else if(action == '*')
-                Console.WriteLine(@$"Here are your result:
-                [{firstNumberConvert} * {secondNumberConvert} = " 
-                + $"{firstNumberConvert * secondNumberConvert}]");
-            else if(action == '/')
-                Console.WriteLine(@$"Here are your result:
-                [{firstNumberConvert} / {secondNumberConvert} = "
-                + $"{firstNumberConvert / secondNumberConvert}]");
-            else if(action == '%')
-                Console.WriteLine(@$"Here are your result:
-                [{firstNumberConvert} % {secondNumberConvert} = "
-                + $"{firstNumberConvert % secondNumberConvert}]");
-            else 
-                Console.WriteLine("There is no such choice , try again by entering \"dotnet run\" !");
+            Console.WriteLine("\nVersion with If-Else:");
+
+            Console.WriteLine("\nEnter the number to run the CALCULATOR.\n");
+            Console.Write("FirstNumber: ");
+            double firstNumberIf = Convert.ToDouble(Console.ReadLine());
+            
+            Console.WriteLine("\nSelect an action:\n");
+
+            Console.Write("Action: ");
+            char actionIf = Convert.ToChar(Console.ReadLine()!);
+
+            Console.Write("\nSecondNumber: ");
+            double secondNumberIf = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("\nNumbers are being converted...\n");
+
+            if(actionIf == '+')
+            {
+            Console.WriteLine("Here are your result:");
+            Console.WriteLine($"|{firstNumberIf} {actionIf} {secondNumberIf} = "
+            +$"{firstNumberIf + secondNumberIf}|");
+            }
+            else if(actionIf == '-')
+            {
+            Console.WriteLine("Here are your result:");
+            Console.WriteLine($"|{firstNumberIf} {actionIf} {secondNumberIf} = "
+            +$"{firstNumberIf - secondNumberIf}|");
+            }
+            else if(actionIf == '*')
+            {
+            Console.WriteLine("Here are your result:");
+            Console.WriteLine($"|{firstNumberIf} {actionIf} {secondNumberIf} = "
+            +$"{firstNumberIf * secondNumberIf}|");
+            }
+            else if(actionIf == '/')
+            {
+            Console.WriteLine("Here are your result:");
+            Console.WriteLine($"|{firstNumberIf} {actionIf} {secondNumberIf} = "
+            +$"{firstNumberIf / secondNumberIf}|");
+            }
+             
+             else if(actionIf == '%')
+            {
+            Console.WriteLine("Here are your result:");
+            Console.WriteLine($"|{firstNumberIf} {actionIf} {secondNumberIf} = "
+            +$"{firstNumberIf % secondNumberIf}|");
+            }
+            else
+                Console.WriteLine("There is no choice!");
         }
     }
 }
