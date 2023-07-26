@@ -1,11 +1,14 @@
 # NewCalculator
 
 Calculator - is a development for working with arithmetic operations such as:
-* Addition [+].
-* Subtraction [-].
-* Mupltiplication [*].
-* Division [/].
-* Remainder Calculation [%].
+#### I used arithmetic operations like:
+```C#
+< + > - addition
+< - > - subtraction
+< * > - multiplication
+< * > - division
+< % > - remainde of the number
+```
 
 #### Types
 ```C#
@@ -42,10 +45,19 @@ Work with ***switch*** and ***If-Else*** operators:
 
 ![](./demo2/demo6.png)
 
-#### If you want to see the old version , follow the [link](https://github.com/ZafarUrakov/NewCalculator/tree/releases/v1.0) !
+## Release Notes
+In the [first](https://github.com/ZafarUrakov/NewCalculator/tree/releases/v1.0) , we used arithmetic operations with input and output to the console. We also did not have to choose an action.
 
+As for this version , you may notice changes in the code like:
 
-#### If you want to take the code for yourself (***clone the repository*** ) , then you need to:
+- Logical operators such as switch and if-else have benn added.
+- Simplified the code.
+- Fixed the errors.
+
+This not all , there will be changes soon.
+
+You can take my code and try it yourself 👇🏻
+
 1.About the list of files,click <> Code.
 
 ![](>/../demo2/demo1.png)
