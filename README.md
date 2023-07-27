@@ -84,9 +84,6 @@ Read more , [link](https://codebuns.com/csharp-basics/escape-sequences/).
 
 ![](>/../demo2/demo8.png)
 
-Work with ***switch*** operator:
-
-
 ## Release Notes
 In the [second](https://github.com/ZafarUrakov/NewCalculator/tree/releases/v2.0) version , we used arithmetic operations with ***input*** and ***output*** to the console.
 We also used logical operators ***if-else***.
