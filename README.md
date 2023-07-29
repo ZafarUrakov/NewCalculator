@@ -92,6 +92,8 @@ As for this version , you may notice changes in the code like:
 
 - Loop operations have been added.
 - There was a long time ago another action, the multiplication table.Now you have two choices!
+- Add try-catch operations.
+- Add Jump statement goto.
 - Simplified the code.
 - Fixed the errors.
 
