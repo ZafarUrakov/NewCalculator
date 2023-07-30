@@ -5,22 +5,22 @@
         static void Main()
         {
             start:
-            Console.WriteLine(@"
-            1.Entrance
-            2.Exit");
-            Console.Write("Choice: ");
-            int pass = Convert.ToInt32(Console.ReadLine()!);
-            
-            while(pass == 1)
+            try
             {
                 Console.WriteLine(@"
-                Hi , what do you want to use ?:
-                1. Calcualtor
-                2. Multiplier");
-                Console.Write("Your selection: ");
-                try
+                1.Entrance
+                2.Exit");
+                Console.Write("Choice: ");
+                int pass = Convert.ToInt32(Console.ReadLine()!);
+                
+                while(pass == 1)
                 {
-                int teamSelection = Convert.ToInt32(Console.ReadLine()!);
+                    Console.WriteLine(@"
+                    Hi , what do you want to use ?:
+                    1. Calcualtor
+                    2. Multiplier");
+                    Console.Write("Your selection: ");
+                    int teamSelection = Convert.ToInt32(Console.ReadLine()!);
                     if(teamSelection == 1)
                     {
 
@@ -63,9 +63,9 @@
                     }
                     else if(teamSelection == 2)
                     {
-                        Console.WriteLine("\t\tWELCOME TO MUTIPLICATION TABLE\n");
+                        Console.WriteLine("\n\t\tWELCOME TO MUTIPLICATION TABLE\n");
 
-                        Console.Write("Enter a number to calculate:");
+                        Console.Write("Enter a number to calculate: ");
                         int numberToCalculate = Convert.ToInt32(Console.ReadLine()!);
 
                         for(int minorNumber = 1; minorNumber <= 9; minorNumber++)
@@ -76,13 +76,25 @@
                         }
                             goto start;
                     }
+                
+                    
                 }
 
-                catch(FormatException formatexception)
-                {
-                    Console.WriteLine("Looks like the value you provided is not integer.");
-                    goto start;
-                }
+            Console.WriteLine("\nGoodBye!");
+            }
+            catch(FormatException formatexception)
+            {
+                Console.WriteLine("\nLooks like the value you provided is not integer.\n");
+                goto start;
+            }
+            catch(OverflowException overFlowException)
+            {
+                Console.WriteLine("\nValue you provided was either too large or too small.\n");
+                goto start;
+            }
+            catch(Exception exception)
+            {
+                Console.WriteLine("\nOops, something went wrong, contact support.\n");
             }
         }
     }
