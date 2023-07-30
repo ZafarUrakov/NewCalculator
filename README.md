@@ -21,19 +21,26 @@ Multiplication is the process of calculating the product of two or more numbers.
 ```C#
 int & double & string & char
 ```
+#### Functions:
+```C#
+Output to console: Console.WriteLine();
+Intput from console: Console.ReadLine();
+Converts: Convert.ToDouble();
+```
 #### Operators:
 ```C#
 switch
 ```
 The ***switch*** statement provides multidirectional branching in the program.
 
-![](./demo2/demo9.png)
+![](./demo2/demo8.png)
 ```C#
 if(){...}
 else{...}
 ```
 
 The ***if-else*** construct is able to check one or more conditions, and if the condition is not true, then execute another code or check another condition.
+![](./demo2/demo9.png)
 ```C#
 while(){...}
 for(){...}
@@ -50,7 +57,6 @@ while (condition)
 }
 ```
 ![](./demo2/demo5.png)
-![](./demo2/demo6.png)
 
 When you know exactly how many times you want to loop through a block of code, use the ***for*** loop instead of a ***while*** loop:
 ```C#
@@ -67,22 +73,17 @@ for (statement 1; statement 2; statement 3)
 
 **Statement 3** is executed (every time) after the code block has been executed.
 
-
-
-
-
-#### Functions:
 ```C#
-Output to console: Console.WriteLine();
-Intput from console: Console.ReadLine();
-Converts: Convert.ToDouble();
+try{...}
+catch(){...}
 ```
+![](./demo2/demo6.png)
 Also in the code i used ***Escape Characters*** - replacement of control characters in the text with corresponding text substitutions.
-Read more , [link](https://codebuns.com/csharp-basics/escape-sequences/).
+Read more, [link](https://codebuns.com/csharp-basics/escape-sequences/).
 
 #### Demo
 
-![](>/../demo2/demo8.png)
+![](>/../demo2/demo10.png)
 
 ## Release Notes
 In the [second](https://github.com/ZafarUrakov/NewCalculator/tree/releases/v2.0) version , we used arithmetic operations with ***input*** and ***output*** to the console.
