@@ -78,6 +78,15 @@ try{...}
 catch(){...}
 ```
 ![](./demo2/demo6.png)
+
+```C#
+Methods
+static void Name(){...}
+```
+![](./demo2/demoo.png)
+
+![](./demo2/demoo1.png)
+
 Also in the code i used ***Escape Characters*** - replacement of control characters in the text with corresponding text substitutions.
 Read more, [link](https://codebuns.com/csharp-basics/escape-sequences/).
 
@@ -86,15 +95,12 @@ Read more, [link](https://codebuns.com/csharp-basics/escape-sequences/).
 ![](>/../demo2/demo10.png)
 
 ## Release Notes
-In the [second](https://github.com/ZafarUrakov/NewCalculator/tree/releases/v2.0) version , we used arithmetic operations with ***input*** and ***output*** to the console.
-We also used logical operators ***if-else***.
+In the [old](https://github.com/ZafarUrakov/NewCalculator/tree/releases/v3.0) version , we used arithmetic operations with ***input*** and ***output*** to the console.
+We also used logical operators ***if-else***, ***try***-***catch*** and ***for-loop*** operations.
 
 As for this version , you may notice changes in the code like:
 
-- Loop operations have been added.
-- There was a long time ago another action, the multiplication table.Now you have two choices!
-- Add try-catch operations.
-- Add Jump statement goto.
+- Added methods.
 - Simplified the code.
 - Fixed the errors.
 
