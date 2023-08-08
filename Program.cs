@@ -7,95 +7,151 @@
             start:
             try
             {
-                Console.WriteLine(@"
-                1.Entrance
-                2.Exit");
-                Console.Write("Choice: ");
-                int pass = Convert.ToInt32(Console.ReadLine()!);
-                
-                while(pass == 1)
-                {
-                    Console.WriteLine(@"
-                    Hi , what do you want to use ?:
-                    1. Calcualtor
-                    2. Multiplier");
-                    Console.Write("Your selection: ");
-                    int teamSelection = Convert.ToInt32(Console.ReadLine()!);
-                    if(teamSelection == 1)
-                    {
-
-                        Console.WriteLine("\t\tWELCOME TO UNIVERSAL CALCULATOR");
-                        Console.WriteLine(@"
-                        You have 5 actions:
-                        <+> - addition
-                        <-> - subtraction
-                        <*> - multiplication
-                        </> - division
-                        <%> - remainder of the number");
-
-                        Console.WriteLine("\nEnter the number to run the CALCULATOR.\n");
-                        Console.Write("FirstNumber: ");
-                        double firstNumber = Convert.ToDouble(Console.ReadLine());
-                        
-                        Console.WriteLine("\nSelect an action:\n");
-
-                        Console.Write("Action: ");
-                        char action = Convert.ToChar(Console.ReadLine()!);
-
-                        Console.Write("\nSecondNumber: ");
-                        double secondNumber = Convert.ToDouble(Console.ReadLine());
-
-                        Console.WriteLine("\nNumbers are being converted...\n");
-
-                        double readyAnswer = action switch
-                        {
-                            '+' => firstNumber + secondNumber,
-                            '-' => firstNumber - secondNumber,
-                            '*' => firstNumber * secondNumber,
-                            '/' => firstNumber / secondNumber,
-                            '%' => firstNumber % secondNumber,
-                            _ => 0
-                        };
-                        Console.WriteLine("Here are your result: ");
-                        Console.WriteLine($"|{firstNumber} {action} {secondNumber} = "
-                        +$"{readyAnswer}|");
-                        goto start;
-                    }
-                    else if(teamSelection == 2)
-                    {
-                        Console.WriteLine("\n\t\tWELCOME TO MUTIPLICATION TABLE\n");
-
-                        Console.Write("Enter a number to calculate: ");
-                        int numberToCalculate = Convert.ToInt32(Console.ReadLine()!);
-
-                        for(int minorNumber = 1; minorNumber <= 9; minorNumber++)
-                        {
-                            int computedNumber = numberToCalculate;
-                            computedNumber *= minorNumber;
-                            Console.WriteLine($"{numberToCalculate} * {minorNumber} = {computedNumber}");
-                        }
-                            goto start;
-                    }
-                
-                    
-                }
-
-            Console.WriteLine("\nGoodBye!");
+                FullSet();
+                goto start;
             }
             catch(FormatException formatexception)
             {
-                Console.WriteLine("\nLooks like the value you provided is not integer.\n");
+                CatchMassage("\n\t\t\tTry again bro!");
                 goto start;
             }
             catch(OverflowException overFlowException)
             {
-                Console.WriteLine("\nValue you provided was either too large or too small.\n");
+                CatchMassage("\nValue you provided was either too large or too small.\n");
                 goto start;
             }
             catch(Exception exception)
             {
-                Console.WriteLine("\nOops, something went wrong, contact support.\n");
+                CatchMassage("\nOops, something went wrong, contact support.\n");
             }
         }
+        static void FullSet()
+        {
+            string pass = GetUserValueByMassage(@"
+                    1.Entrance
+                    2.Exit
+                    Choice: ");
+            double passNumber = Convert.ToDouble(pass);
+                
+            while(passNumber == 1)
+                {
+                    string teamSelection = GetUserValueByMassage(@"
+                        Hi , what do you want to use ?:
+                        1. Calcualtor
+                        2. Multiplier
+                        Your selection: ");
+                    double teamSelectionToConvert = Convert.ToDouble(teamSelection);
+                    if(teamSelectionToConvert == 1)
+                    {
+                        ShowCalculator();
+                    } 
+                        
+                    else if(teamSelectionToConvert == 2)
+                    {
+                        ShowMultiplicationTable();
+                        
+                    } 
+                }
+
+            Console.WriteLine("\nGoodBye!");
+        }
+
+        static void ShowMultiplicationTable()
+        {
+            string numberToCalculate = GetUserValueByMassage(@"
+                    WELCOME TO MUTIPLICATION TABLE
+                    Enter a number to calculate: ");
+            int numberToConvert = Convert.ToInt32(numberToCalculate);
+
+            for(int minorNumber = 1; minorNumber <= 9; minorNumber++)
+            {
+            int computedNumber = numberToConvert;
+            computedNumber *= minorNumber;
+            Console.WriteLine($"\t\t\t{numberToConvert} * {minorNumber} = {computedNumber}");
+            }
+        
+        }
+        
+        static void ShowCalculator()
+        {
+             string firstNumber = GetUserValueByMassage(@"
+                    WELCOME TO UNIVERSAL CALCULATOR
+                    You have 5 actions:
+                    <+> - addition
+                    <-> - subtraction
+                    <*> - multiplication
+                    </> - division
+                    <%> - remainder of the number
+                    Enter the number to run the CALCULATOR.
+                    FirstNumber: ");
+                        double firstNumberToConvert = Convert.ToDouble(firstNumber);
+                    
+                        string action = GetUserValueByMassage(@"
+                    Select an action:
+                    Action: ");
+                        char actionToConvert = Convert.ToChar(action);
+
+
+                        string secondNumber = GetUserValueByMassage(@"
+                    SecondNumber: ");
+                        double secondNumberToConvert = Convert.ToDouble(secondNumber);
+
+                        Console.WriteLine(@"
+                    Numbers are being converted...");
+
+                        double readyAnswer = actionToConvert switch
+                        {
+                            '+' => Sum(firstNumberToConvert, secondNumberToConvert),
+                            '-' => Substract(firstNumberToConvert, secondNumberToConvert),
+                            '*' => Multiply(firstNumberToConvert, secondNumberToConvert),
+                            '/' => Divite(firstNumberToConvert, secondNumberToConvert),
+                            '%' => CalculateRemainder(firstNumberToConvert, secondNumberToConvert),
+                            _ => 0
+                        };
+                        string enter = GetUserValueByMassage(@$"
+                    Here are your result: {firstNumber} {action} {secondNumber} = {readyAnswer}
+                    Enter..");
+                        
+                        int enterToConvert = Convert.ToInt32(enter);
+                        
+                    }
+
+        static double Sum(double firstNumber,double secondNumber)
+        {
+            return firstNumber + secondNumber;
+        }
+        
+        static double Substract(double firstNumber,double secondNumber)
+        {
+            return firstNumber - secondNumber;
+        }
+
+        static double Multiply(double firstNumber,double secondNumber)
+        {
+            return firstNumber * secondNumber;
+        }
+
+        static double Divite(double firstNumber,double secondNumber)
+        {
+            return firstNumber / secondNumber;
+        }
+
+        static double CalculateRemainder(double firstNumber,double secondNumber)
+        {
+            return firstNumber % secondNumber;
+        }
+
+        static string GetUserValueByMassage(string massage)
+        {
+            Console.Write(massage);
+            return Console.ReadLine()!;
+        }
+
+        static string CatchMassage(string CatchMassage)
+        {
+            Console.WriteLine(CatchMassage);
+            return Console.ReadLine()!;
+        }
+
     }
 }
