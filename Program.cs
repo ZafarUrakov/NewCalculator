@@ -22,7 +22,7 @@ namespace Calculator
                     MessageR.Exit();
                     break;
                 }
-            } while (choiceOfOptions != 4);
+            } while (choiceOfOptions);
         }
     }
 }
