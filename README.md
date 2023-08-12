@@ -87,6 +87,14 @@ static void Name(){...}
 
 ![](./demo2/demoo1.png)
 
+```C#
+Classes
+public class CalculatR{...}
+```
+![](./demo2/demo11.png)
+
+
+
 Also in the code i used ***Escape Characters*** - replacement of control characters in the text with corresponding text substitutions.
 Read more, [link](https://codebuns.com/csharp-basics/escape-sequences/).
 
@@ -95,12 +103,14 @@ Read more, [link](https://codebuns.com/csharp-basics/escape-sequences/).
 ![](>/../demo2/demo10.png)
 
 ## Release Notes
-In the [old](https://github.com/ZafarUrakov/NewCalculator/tree/releases/v3.0) version , we used arithmetic operations with ***input*** and ***output*** to the console.
-We also used logical operators ***if-else***, ***try***-***catch*** and ***for-loop*** operations.
+In the [old](https://github.com/ZafarUrakov/NewCalculator/tree/refactore/v.1) version , we have updated and simplified the code with methods, but this version is new, we have further simplified the code with classes. Note how cool it is.
 
 As for this version , you may notice changes in the code like:
 
-- Added methods.
+- Added Classes:
+  - CalculatR - in this class you can see how the **Calculator** works.
+  - MultiplicatR - in this class you can see how the **Multiplication Table** works.
+  - MessageR - this class was created for messages.
 - Simplified the code.
 - Fixed the errors.
 
