@@ -1,67 +1,55 @@
 namespace Calculator.Classes;
 
-public class CalculatR
+public class CalculatR // business logic - hizmat kiluvchu qavat
 {
-    public void ShowCalculator()
+    public decimal FirstValue { get; set; }
+    public string ActionValue { get; set; }
+    public decimal SecondValue { get; set; }
+
+    public CalculatR(decimal firstValue, string actionValue, decimal secondValue)
     {
-        string firstNumber = MessageR.GetUserValueByMassage(@"
-                    WELCOME TO UNIVERSAL CALCULATOR
-                    You have 5 actions:
-                    <+> - addition
-                    <-> - subtraction
-                    <*> - multiplication
-                    </> - division
-                    <%> - remainder of the number
-                    Enter the number to run the CALCULATOR.
-                    FirstNumber: ");
-        double firstNumberToConvert = Convert.ToDouble(firstNumber);
-
-        string action = MessageR.GetUserValueByMassage(@"
-                    Select an action:
-                    Action: ");
-        char actionToConvert = Convert.ToChar(action);
-
-
-        string secondNumber = MessageR.GetUserValueByMassage(@"
-                    SecondNumber: ");
-        double secondNumberToConvert = Convert.ToDouble(secondNumber);
-
-        Console.WriteLine(@"
-                    Numbers are being converted...");
-
-        double readyAnswer = actionToConvert switch
+        FirstValue = firstValue;
+        ActionValue = actionValue;
+        SecondValue = secondValue;
+        ShowCalculator();
+    }
+    public virtual void ShowCalculator()
+    {
+        ReportR.ReportProgress();
+        decimal readyAnswer =  this.ActionValue switch
         {
-            '+' => Sum(firstNumberToConvert, secondNumberToConvert),
-            '-' => Substract(firstNumberToConvert, secondNumberToConvert),
-            '*' => Multiply(firstNumberToConvert, secondNumberToConvert),
-            '/' => Divite(firstNumberToConvert, secondNumberToConvert),
-            '%' => CalculateRemainder(firstNumberToConvert, secondNumberToConvert),
+            "+" => Sum(this.FirstValue, this.SecondValue),
+            "-" => Substract(this.FirstValue, this.SecondValue),
+            "*" => Multiply(this.FirstValue, this.SecondValue),
+            "/" => Divite(this.FirstValue, this.SecondValue),
+            "%" => CalculateRemainder(this.FirstValue, this.SecondValue),
             _ => 0
         };
-        Console.WriteLine(@$"
-                    Here are your result: {firstNumber} {action} {secondNumber} = {readyAnswer}");
+        Console.WriteLine($"Here are your result: " +
+                          $"{this.FirstValue} {this.ActionValue} {this.SecondValue} " +
+                          $"= {readyAnswer}");
     }
-    static double Sum(double firstNumber,double secondNumber)
+    static decimal Sum(decimal firstNumber,decimal secondNumber)
     {
         return firstNumber + secondNumber;
     }
         
-    static double Substract(double firstNumber,double secondNumber)
+    static decimal Substract(decimal firstNumber,decimal secondNumber)
     {
         return firstNumber - secondNumber;
     }
 
-    static double Multiply(double firstNumber,double secondNumber)
+    static decimal Multiply(decimal firstNumber,decimal secondNumber)
     {
         return firstNumber * secondNumber;
     }
 
-    static double Divite(double firstNumber,double secondNumber)
+    static decimal Divite(decimal firstNumber,decimal secondNumber)
     {
         return firstNumber / secondNumber;
     }
 
-    static double CalculateRemainder(double firstNumber,double secondNumber)
+    static decimal CalculateRemainder(decimal firstNumber,decimal secondNumber)
     {
         return firstNumber % secondNumber;
     }

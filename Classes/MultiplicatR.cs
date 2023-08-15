@@ -1,19 +1,24 @@
 namespace Calculator.Classes;
 
-public class MultiplicatR
+public class MultiplicatR // business logic
 {
+    public string Greetings { get; set; }
+    public decimal Convertion { get; set; }
+    public decimal LoopVaruable { get; set; }
+
+    public MultiplicatR()
+    {
+        this.Greetings = ValueManipulatR.GetInputByMessageToAction("Welcome to Multiplication table" + "\nEnter a numbet to calculate: ");
+        this.Convertion = Convert.ToDecimal(this.Greetings);
+        ShowMultiplicationTable();
+    }
     public void ShowMultiplicationTable()
     {
-        string numberToCalculate = MessageR.GetUserValueByMassage(@"
-                    WELCOME TO MUTIPLICATION TABLE
-                    Enter a number to calculate: ");
-        int numberToConvert = Convert.ToInt32(numberToCalculate);
-
         for(int minorNumber = 1; minorNumber <= 9; minorNumber++)
         {
-            int computedNumber = numberToConvert;
-            computedNumber *= minorNumber;
-            Console.WriteLine($"\t\t\t{numberToConvert} * {minorNumber} = {computedNumber}");
+            this.LoopVaruable = this.Convertion;
+            this.LoopVaruable *= minorNumber;
+            Console.WriteLine($"{this.Convertion} * {minorNumber} = {this.LoopVaruable}");
         }
     }
 }
