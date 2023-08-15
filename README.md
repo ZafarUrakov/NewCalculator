@@ -90,7 +90,8 @@ static void Name(){...}
 
 
 `Called Methods:`
-![](./demo2/demoo.png)
+
+![](./demo2/demo15.png)
 
 ```C#
 Classes
