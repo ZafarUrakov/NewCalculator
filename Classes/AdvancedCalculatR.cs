@@ -15,15 +15,8 @@ public class AdvancedCalculatR : CalculatR
 
     public override void ShowCalculator()
     {
-        if (ActionValue == "prc")
-        {
-            decimal result = Prc(this.FirstValue, this.SecondValue);
+        decimal result = Prc(this.FirstValue, this.SecondValue);
             Console.WriteLine($"\nAnswer: {this.SecondValue}% of {this.FirstValue} = {result}.");
-        }
-        else
-        {
-            base.ShowCalculator();
-        }
     }
 
 }
