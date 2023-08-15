@@ -1,6 +1,6 @@
 namespace Calculator.Classes;
 
-public class CalculatR // business logic - hizmat kiluvchu qavat
+public class CalculatR
 {
     public decimal FirstValue { get; set; }
     public string ActionValue { get; set; }
