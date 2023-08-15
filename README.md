@@ -37,7 +37,6 @@ switch
 ```
 The ***switch*** statement provides multidirectional branching in the program.
 
-![](./demo2/demo8.png)
 ```C#
 if(){...}
 else{...}
@@ -102,19 +101,23 @@ public class CalculatR{...}
 `Constructor:`
 
 *Constructor* is a special method of the class which gets automatically invoked whenever an instance of the class is created.
-![](./demo2/demo 12.png)
+
+![](./demo2/demo12.png)
+
 `Class Inheritance:`
 
 In C#, *inheritance* allows us to create a new class from an existing class.
-![](./demo2/demo 13.png)
+
+![](./demo2/demo13.png)
 
 Also in the code i used ***Escape Characters*** - replacement of control characters in the text with corresponding text substitutions.
 Read more, [link](https://codebuns.com/csharp-basics/escape-sequences/).
 
 #### Demo
 
-![](./demo2/demo 10.png)
-![](./demo2/demo 14.png)
+![](./demo2/demo10.png)
+
+![](./demo2/demo14.png)
 
 
 ## Release Notes
@@ -124,9 +127,11 @@ As for this version we have added new function "PRC - percentage counter", PRC w
 
 - Added Classes:
   - Constructor:
-      ![](./demo2/demo 12.png)
+  
+  ![](./demo2/demo12.png)
   - Class Inheritance:
-      ![](./demo2/demo 13.png)
+  
+  ![](>/../demo2/demo13.png)
 
 - Simplified the code.
 - Fixed the errors.
