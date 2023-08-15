@@ -1,4 +1,4 @@
-# Calculator and Multiplication table.
+# Calculator, Multiplication table & Interest calculator 
 
 Calculator - is a development for working with arithmetic operations such as:
 #### I used arithmetic operations like:
@@ -16,7 +16,11 @@ Multiplication is the process of calculating the product of two or more numbers.
 1 * 3 = 3
 ...
 ```
-
+The percentage calculator allows you to make any calculations with percentages: finding the percentage of the number, how many percent is the number "X" of the number "Y".
+```C#
+5% of 25 = 1.25
+...
+```
 #### Types
 ```C#
 int & double & string & char
@@ -83,9 +87,11 @@ catch(){...}
 Methods
 static void Name(){...}
 ```
-![](./demo2/demoo.png)
-
 ![](./demo2/demoo1.png)
+
+
+`Called Methods:`
+![](./demo2/demoo.png)
 
 ```C#
 Classes
@@ -93,24 +99,35 @@ public class CalculatR{...}
 ```
 ![](./demo2/demo11.png)
 
+`Constructor:`
 
+*Constructor* is a special method of the class which gets automatically invoked whenever an instance of the class is created.
+![](>/../demo2/demo 12.png)
+`Class Inheritance:`
+
+In C#, *inheritance* allows us to create a new class from an existing class.
+![](>/../demo2/demo 13.png)
 
 Also in the code i used ***Escape Characters*** - replacement of control characters in the text with corresponding text substitutions.
 Read more, [link](https://codebuns.com/csharp-basics/escape-sequences/).
 
 #### Demo
 
-![](>/../demo2/demo10.png)
+![](>/../demo2/demo 10.png)
+![](>/../demo2/demo 14.png)
+
 
 ## Release Notes
-In the [old](https://github.com/ZafarUrakov/NewCalculator/tree/refactore/v.1) version , we have updated and simplified the code with methods, but this version is new, we have further simplified the code with classes. Note how cool it is.
+In the [old](https://github.com/ZafarUrakov/NewCalculator/tree/refactore/v.2) version , we have updated and simplified the code with methods, classes and other properties..
 
-As for this version , you may notice changes in the code like:
+As for this version we have added new function "PRC - percentage counter", PRC will help you calculate the percentage of the amounts you entered.You can also see changes in the code like:
 
 - Added Classes:
-  - CalculatR - in this class you can see how the **Calculator** works.
-  - MultiplicatR - in this class you can see how the **Multiplication Table** works.
-  - MessageR - this class was created for messages.
+  - Constructor:
+      ![](>/../demo2/demo 12.png)
+  - Class Inheritance:
+      ![](>/../demo2/demo 13.png)
+
 - Simplified the code.
 - Fixed the errors.
 
