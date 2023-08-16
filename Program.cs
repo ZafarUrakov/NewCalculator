@@ -10,35 +10,34 @@ namespace Calculator
             {
                 ValueManipulatR.ShowMenu();
                 int choiceOfOptions = ReportR.ConvertInputOption();
-                if (choiceOfOptions == 1)
+                switch (choiceOfOptions)
                 {
-                    decimal firstValue = ValueManipulatR.GetUserValueByMassage("Welcome to Calculator" +
-                                                                               "\n\tPRC - percentage counter" +
-                                                                               "\nFirst number: ");
-                    string actionValue = ValueManipulatR.GetInputByMessageToAction("\nOperation[+ | - | * | / | % | prc]: ");
-                    if (actionValue == "prc")
+                    case 1:
+                        decimal firstValue = ValueManipulatR.GetUserValueByMassage("Welcome to Calculator" +
+                            "\n\tPRC - percentage counter" +
+                            "\nFirst number: ");
+                        string actionValue = ValueManipulatR.GetInputByMessageToAction("\nOperation[+ | - | * | / | % | prc]: ");
+                        if (actionValue == "prc")
+                        {
+                            decimal secondValue = ValueManipulatR.GetUserValueByMassage("\nPercent: ");
+                            var calculate = new AdvancedCalculatR(firstValue, actionValue, secondValue);
+                            // calculate.ShowCalculator(); - fixed the errors, the reason was the constructor + additional output to the console.
+                        }
+                        else
+                        {
+                            decimal secondValue = ValueManipulatR.GetUserValueByMassage("\nSecond number: ");
+                            var calculator = new CalculatR(firstValue, actionValue, secondValue);
+                        }
+                        break;
+                    case 2:
                     {
-                        decimal secondValue = ValueManipulatR.GetUserValueByMassage("\nPercent: ");
-                        var calculate = new AdvancedCalculatR(firstValue, actionValue, secondValue);
-                        calculate.ShowCalculator();
+                        var multiplicator = new MultiplicatR();break;
                     }
-                    else if (actionValue == "+" || actionValue == "-" || actionValue == "*" || actionValue == "/" || actionValue == "%")
-                    {
-                        decimal secondValue = ValueManipulatR.GetUserValueByMassage("\nSecond number: ");
-                        var calculator = new CalculatR(firstValue, actionValue, secondValue);
-                    }
-                    else
-                        Console.WriteLine("There is no such choice.Try again.");
-
-                }
-                else if (choiceOfOptions == 2)
-                {
-                    var multiplicator = new MultiplicatR();
-                }
-                else if (choiceOfOptions == 3)
-                {
-                    ReportR.Exit();
-                    break;
+                    case 3:
+                        {
+                            ReportR.Exit();
+                            break;
+                        }
                 }
                 backToMenu = ValueManipulatR.BackToMenu();
             } while (backToMenu == "yes");
