@@ -2,57 +2,53 @@ namespace Calculator.Classes;
 
 public class CalculatR
 {
-    public decimal FirstValue { get; set; }
-    public string ActionValue { get; set; }
-    public decimal SecondValue { get; set; }
+    public decimal FirstNumberToCount { get; set; }
+    public string Function { get; set; }
+    public decimal SecondNumberToCount { get; set; }
 
-    public CalculatR(decimal firstValue, string actionValue, decimal secondValue)
+    public CalculatR(decimal firstNumberToCount, string function, decimal secondNumberToCount)
     {
-        FirstValue = firstValue;
-        ActionValue = actionValue;
-        SecondValue = secondValue;
-        ShowCalculator();
+        FirstNumberToCount = firstNumberToCount;
+        Function = function;
+        SecondNumberToCount = secondNumberToCount;
+        CalculatorWork();
     }
-    public virtual void ShowCalculator()
+
+    public virtual void CalculatorWork()
     {
-        ReportR.ReportProgress();
-        decimal readyAnswer =  this.ActionValue switch
+        ReportR.ResultProgress();
+        decimal result = this.Function switch
         {
-            "+" => Sum(this.FirstValue, this.SecondValue),
-            "-" => Substract(this.FirstValue, this.SecondValue),
-            "*" => Multiply(this.FirstValue, this.SecondValue),
-            "/" => Divite(this.FirstValue, this.SecondValue),
-            "%" => CalculateRemainder(this.FirstValue, this.SecondValue),
+            "+" => Sum(this.FirstNumberToCount, this.SecondNumberToCount),
+            "-" => Substract(this.FirstNumberToCount, this.SecondNumberToCount),
+            "*" => Multiply(this.FirstNumberToCount, this.SecondNumberToCount),
+            "/" => Divite(this.FirstNumberToCount, this.SecondNumberToCount),
+            "%" => CalculateRemainder(this.FirstNumberToCount, this.SecondNumberToCount),
             _ => 0
         };
-        Console.WriteLine($"Here are your result: " +
-                          $"{this.FirstValue} {this.ActionValue} {this.SecondValue} " +
-                          $"= {readyAnswer}");
-    }
-    static decimal Sum(decimal firstNumber,decimal secondNumber)
-    {
-        return firstNumber + secondNumber;
-    }
-        
-    static decimal Substract(decimal firstNumber,decimal secondNumber)
-    {
-        return firstNumber - secondNumber;
+        Console.WriteLine(
+            $"\nCalculate result: {this.FirstNumberToCount} {this.Function} {this.SecondNumberToCount} = {result}");
     }
 
-    static decimal Multiply(decimal firstNumber,decimal secondNumber)
+    static decimal Sum(decimal firstNumberToCount, decimal secondNumberToCount)
     {
-        return firstNumber * secondNumber;
+        return firstNumberToCount + secondNumberToCount;
     }
-
-    static decimal Divite(decimal firstNumber,decimal secondNumber)
+    static decimal Substract(decimal firstNumberToCount, decimal secondNumberToCount)
     {
-        return firstNumber / secondNumber;
-    }
-
-    static decimal CalculateRemainder(decimal firstNumber,decimal secondNumber)
+        return firstNumberToCount - secondNumberToCount;
+    } 
+    static decimal Multiply(decimal firstNumberToCount, decimal secondNumberToCount)
     {
-        return firstNumber % secondNumber;
+        return firstNumberToCount * secondNumberToCount;
     }
-
+    static decimal Divite(decimal firstNumberToCount, decimal secondNumberToCount)
+    {
+        return firstNumberToCount / secondNumberToCount;
+    }
+    static decimal CalculateRemainder(decimal firstNumberToCount, decimal secondNumberToCount)
+    {
+        return firstNumberToCount % secondNumberToCount;
+    }
     
 }
