@@ -2,8 +2,7 @@ namespace Calculator.Classes;
 
 public class ReportR
 {
-    
-    public static int ConvertInputOption()
+    public static int FormatExceptionMessage()
     {
 
         int firstOption = 0;
@@ -27,13 +26,19 @@ public class ReportR
 
         return firstOption;
     }
-    public static void ReportProgress()
+
+    public static void ResultProgress()
     {
-        Console.WriteLine("In progress...");
-    }
-    public static void Exit()
-    {
-        Console.WriteLine("Thank you for using our app.");
+        Console.WriteLine("\nData progressing..");
     }
 
+    public static void DefaultProgress()
+    {
+        Console.WriteLine("There is mo such choice, try again."); 
+    }
+
+    public static void Exit()
+    {
+        Console.WriteLine("Thanks for using the app..");
+    }
 }

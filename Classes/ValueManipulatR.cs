@@ -2,38 +2,44 @@ namespace Calculator.Classes;
 
 public class ValueManipulatR // Broker - tashqa dan yoshiradi.
 {
-    public static void ShowMenu()
+    public void ShowMenu()
     {
-        Console.Write("\nWelcome.\n1.Calculator" +
-                      "\n2.Multiplicator" +
-                      "\n3.Exit" +
-                      "\nChoice: ");
+        Console.Write("MENU\n1.Calculator\n2.Multiplication table\n3.Exit\nChoice: ");
+    }
+    
+    public static decimal GetUserValueByMassage(string text)
+    {   decimal firstOption = 0;
+        try
+        {
+            Console.Write(text);
+            decimal number = decimal.Parse(Console.ReadLine()!);
+        }
+        catch (FormatException formatException)
+        {
+            Console.WriteLine("The input is not in a correct format");
+            return 0;
+        }
+        catch (OverflowException overflowException)
+        {
+            Console.WriteLine("Value is too large or too small, take a look data type.");
+        }
+        catch (Exception exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
+        return firstOption;
     }
 
-    
-    public static decimal GetUserValueByMassage(string massage)
+    public static string GetInputByMessageToAction(string text)
     {
-        Console.Write(massage);
-        return decimal.Parse(Console.ReadLine());
-    }
-    public static string GetInputByMessageToAction(string message)
-    {
-        Console.Write(message);
+        Console.Write(text);
         return Console.ReadLine();
     }
-    
-    
-    static string CatchMassage(string CatchMassage)
+
+    public static string AppLogin()
     {
-        Console.WriteLine(CatchMassage);
-        return Console.ReadLine()!;
-    }
-    
-    public static string BackToMenu()
-    {
-        Console.Write("\nBack to menu?[yes || no]\nChoice: ");
-        string choice = Console.ReadLine();
+        Console.Write("\nLaunch the application? yes or no\nChoice: ");
+        string choice = Console.ReadLine()!;
         return choice;
     }
-
 }

@@ -2,21 +2,20 @@ namespace Calculator.Classes;
 
 public class AdvancedCalculatR : CalculatR
 {
-    public AdvancedCalculatR(decimal firstNumber, string option, decimal secondNumber)
-        : base(firstNumber, option, secondNumber)
+    public AdvancedCalculatR(decimal firstNumberToCount, string function, decimal secondNumberToCount)
+        : base(firstNumberToCount, function, secondNumberToCount)
     {
     }
 
-    public decimal Prc(decimal firstNunber, decimal secondNumber)
+    public decimal Prc(decimal firstNumberToCount, decimal secondNumberToCount)
     {
-        decimal formula = (firstNunber / 100) * secondNumber;
+        decimal formula = (firstNumberToCount / 100) * secondNumberToCount;
         return formula;
     }
 
-    public override void ShowCalculator()
+    public override void CalculatorWork()
     {
-        decimal result = Prc(this.FirstValue, this.SecondValue);
-            Console.WriteLine($"\nAnswer: {this.SecondValue}% of {this.FirstValue} = {result}.");
+        decimal result = Prc(this.FirstNumberToCount, this.SecondNumberToCount);
+        Console.WriteLine($"\nCalculate result: {this.SecondNumberToCount}% of {this.FirstNumberToCount} equals {result}.");
     }
-
 }
