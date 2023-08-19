@@ -43,7 +43,7 @@ else{...}
 ```
 
 The ***if-else*** construct is able to check one or more conditions, and if the condition is not true, then execute another code or check another condition.
-![](./demo2/demo9.png)
+![](./Assets/demo9.png)
 ```C#
 while(){...}
 for(){...}
@@ -59,7 +59,7 @@ while (condition)
   // code block to be executed
 }
 ```
-![](./demo2/demo5.png)
+![](./Assets/demo5.png)
 
 When you know exactly how many times you want to loop through a block of code, use the ***for*** loop instead of a ***while*** loop:
 ```C#
@@ -68,7 +68,7 @@ for (statement 1; statement 2; statement 3)
   // code block to be executed
 }
 ```
-![](./demo2/demo7.png)
+![](./Assets/demo7.png)
 
 **Statement 1** is executed (one time) before the execution of the code block.
 
@@ -80,59 +80,62 @@ for (statement 1; statement 2; statement 3)
 try{...}
 catch(){...}
 ```
-![](./demo2/demo6.png)
+![](./Assets/demo6.png)
 
 ```C#
 Methods
 static void Name(){...}
 ```
-![](./demo2/demoo1.png)
+![](./Assets/demoo1.png)
 
 
 `Called Methods:`
 
-![](./demo2/demo15.png)
+![](./Assets/demo15.png)
 
 ```C#
 Classes
 public class CalculatR{...}
 ```
-![](./demo2/demo11.png)
+![](./Assets/demo11.png)
 
 `Constructor:`
 
 *Constructor* is a special method of the class which gets automatically invoked whenever an instance of the class is created.
 
-![](./demo2/demo12.png)
+![](./Assets/demo12.png)
 
 `Class Inheritance:`
 
 In C#, *inheritance* allows us to create a new class from an existing class.
 
-![](./demo2/demo13.png)
+![](./Assets/demo13.png)
 
 Also in the code i used ***Escape Characters*** - replacement of control characters in the text with corresponding text substitutions.
 Read more, [link](https://codebuns.com/csharp-basics/escape-sequences/).
 
 #### Demo
 
-![](./demo2/demo10.png)
+![](./Assets/demo10.png)
 
-![](./demo2/demo14.png)
-
+![](./Assets/demo14.png)
 
 ## Release Notes
 In the [old](https://github.com/ZafarUrakov/NewCalculator/tree/refactore/v.2) version , we have updated and simplified the code with methods, classes and other properties..
 
-As for this version we have added new function "PRC - percentage counter", PRC will help you calculate the percentage of the amounts you entered.You can also see changes in the code like:
+As for this version we also added and simplified the code using the Interfaces and we have added new function "PRC - percentage counter", PRC will help you calculate the percentage of the amounts you entered.You can also see changes in the code like:
 
 - Added Classes:
   - Constructor:
   
-  ![](./demo2/demo12.png)
+  ![](./Assets/demo12.png)
   - Class Inheritance:
   
-  ![](>/../demo2/demo13.png)
+  ![](>/../Assets/demo13.png)
+- Added Interfaces
+  ![](>/../Assets/demo16.png)
+- Used ForegroundColor(ConsoleColor)
+  ![](>/../Assets/demo17.png)
 
 - Simplified the code.
 - Fixed the errors.
@@ -143,12 +146,12 @@ You can take my code and try it yourself 👇🏻
 
 1.About the list of files,click <> Code.
 
-![](>/../demo2/demo1.png)
+![](>/../Assets/demo1.png)
 
 
 2.Copy the URL(HTTPS) of the repository.
 
-![](>/../demo2/demo2.png)
+![](>/../Assets/demo2.png)
 
 
 3.Open terminal.
@@ -157,11 +160,11 @@ You can take my code and try it yourself 👇🏻
 
 5.Type "***git clone***" and paste the URL copied earlier.
 
-![](>/../demo2/demo3.png)
+![](>/../Assets/demo3.png)
 
 
 6.Press enter to create a local clone.
 
-![](>/../demo2/demo4.png)
+![](>/../Assets/demo4.png)
 
 To see other projects click [HERE](https://github.com/ZafarUrakov).

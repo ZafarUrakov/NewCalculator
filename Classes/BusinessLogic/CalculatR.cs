@@ -1,7 +1,8 @@
 namespace Calculator.Classes;
 
-public class CalculatR
+public class CalculatR : ISummatR
 {
+    IReportingContract reporter = new ReportR();
     public decimal FirstNumberToCount { get; set; }
     public string Function { get; set; }
     public decimal SecondNumberToCount { get; set; }
@@ -14,9 +15,9 @@ public class CalculatR
         CalculatorWork();
     }
 
-    public virtual void CalculatorWork()
+    protected virtual void CalculatorWork()
     {
-        ReportR.ResultProgress();
+        reporter.ResultProgress();
         decimal result = this.Function switch
         {
             "+" => Sum(this.FirstNumberToCount, this.SecondNumberToCount),
@@ -30,25 +31,24 @@ public class CalculatR
             $"\nCalculate result: {this.FirstNumberToCount} {this.Function} {this.SecondNumberToCount} = {result}");
     }
 
-    static decimal Sum(decimal firstNumberToCount, decimal secondNumberToCount)
+    public decimal Sum(decimal firstNumberToCount, decimal secondNumberToCount)
     {
         return firstNumberToCount + secondNumberToCount;
     }
-    static decimal Substract(decimal firstNumberToCount, decimal secondNumberToCount)
+    public decimal Substract(decimal firstNumberToCount, decimal secondNumberToCount)
     {
         return firstNumberToCount - secondNumberToCount;
     } 
-    static decimal Multiply(decimal firstNumberToCount, decimal secondNumberToCount)
+    public decimal Multiply(decimal firstNumberToCount, decimal secondNumberToCount)
     {
         return firstNumberToCount * secondNumberToCount;
     }
-    static decimal Divite(decimal firstNumberToCount, decimal secondNumberToCount)
+    public decimal Divite(decimal firstNumberToCount, decimal secondNumberToCount)
     {
         return firstNumberToCount / secondNumberToCount;
     }
-    static decimal CalculateRemainder(decimal firstNumberToCount, decimal secondNumberToCount)
+    public decimal CalculateRemainder(decimal firstNumberToCount, decimal secondNumberToCount)
     {
         return firstNumberToCount % secondNumberToCount;
     }
-    
 }
