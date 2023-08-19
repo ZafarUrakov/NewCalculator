@@ -133,8 +133,11 @@ As for this version we also added and simplified the code using the Interfaces a
   
   ![](>/../Assets/demo13.png)
 - Added Interfaces
+- 
   ![](>/../Assets/demo16.png)
+- 
 - Used ForegroundColor(ConsoleColor)
+- 
   ![](>/../Assets/demo17.png)
 
 - Simplified the code.
