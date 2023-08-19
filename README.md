@@ -114,6 +114,10 @@ In C#, *inheritance* allows us to create a new class from an existing class.
 Also in the code i used ***Escape Characters*** - replacement of control characters in the text with corresponding text substitutions.
 Read more, [link](https://codebuns.com/csharp-basics/escape-sequences/).
 
+`Project diagram:`
+
+![](./Assets/demo18.png)
+
 #### Demo
 
 ![](./Assets/demo10.png)
