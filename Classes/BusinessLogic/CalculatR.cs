@@ -15,7 +15,7 @@ public class CalculatR : ISummatR
         CalculatorWork();
     }
 
-    protected virtual void CalculatorWork()
+    protected virtual void CalculatorWork()// Polymorphism
     {
         reporter.ResultProgress();
         decimal result = this.Function switch

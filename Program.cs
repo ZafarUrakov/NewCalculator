@@ -10,9 +10,8 @@ namespace Calculator
              do
              {
                  Console.Clear();
-                 var valueManipulator = new ValueManipulatR();
                  IReportingContract reporter = new ReportR();
-                 valueManipulator.ShowMenu();
+                 ValueManipulatR.ShowMenu();
                  int itemSelection = reporter.FormatExceptionMessage();
                  switch (itemSelection)
                  {
