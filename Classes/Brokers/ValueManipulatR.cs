@@ -3,7 +3,7 @@ namespace Calculator.Classes;
 public class ValueManipulatR // Broker
 {
     private string text;
-    public void ShowMenu()
+    public static void ShowMenu()
     {
         Console.Write("MENU\n1.Calculator\n2.Multiplication table\n3.Exit\nChoice: ");
     }
